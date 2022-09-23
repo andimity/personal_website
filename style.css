@@ -22,13 +22,13 @@ section {
    grid-column: auto;
    place-items: center;
    align-content: center;
-   min-height: 100vh;
+   min-height: 10vh;
 }
 
 h1 {
    font-family: Nabla, Inter, Avenir, Helvetica, Arial, sans-serif;
    font-size: 150px;
-   line-height: 3;
+   line-height: 1.1;
    display: grid;
    place-items: center;
    align-content: center;
@@ -37,10 +37,16 @@ h1 {
 h2 {
    font-family: Pacifico, Inter, Avenir, Helvetica, Arial, sans-serif;
    font-size: 2em;
-   line-height: 2;
+   line-height: 1.1;
    display: grid;
    place-items: center;
    align-content: center;
+}
+
+.fadeIn {
+   opacity: 0;
+   filter: blur(10px);
+   transition: all 3s;
 }
 
 .hiddenLeft {
@@ -48,6 +54,7 @@ h2 {
    filter: blur(10px);
    transform: translateX(-100%);
    transition: all 1s;
+   transition-delay: 2s;
 }
 
 .hiddenRight {
@@ -55,6 +62,7 @@ h2 {
    filter: blur(10px);
    transform: translateX(+100%);
    transition: all 1s;
+   transition-delay: 4s;
 }
 
 .show {
