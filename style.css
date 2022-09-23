@@ -43,10 +43,17 @@ h2 {
    align-content: center;
 }
 
-.hidden {
+.hiddenLeft {
    opacity: 0;
    filter: blur(10px);
    transform: translateX(-100%);
+   transition: all 1s;
+}
+
+.hiddenRight {
+   opacity: 0;
+   filter: blur(10px);
+   transform: translateX(+100%);
    transition: all 1s;
 }
 
