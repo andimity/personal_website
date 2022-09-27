@@ -8,18 +8,29 @@ body {
    
    color-scheme: light dark;
    color: rgb(255, 255, 255);
-   background-color: #001e5b;
-   background-image: url('bg_image.jpg');
-   background-position: left top; /* Center the image */
-   background-repeat: no-repeat; /* Do not repeat the image */
-   background-size: cover;
-   animation: backgroundAnimation 40s infinite alternate;
+   background-color: black;
  
    font-synthesis: none;
    text-rendering: optimizeLegibility;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
    -webkit-text-size-adjust: 100%;
+ }
+
+ .electricalEngineer {
+   background-image: url('images/pcb.jpg');
+   background-position: top left;
+   background-repeat: no-repeat;
+   background-size: cover;
+   animation: backgroundAnimation 30s infinite alternate;
+ }
+
+ .soundEngineer {
+   background-image: url('images/mixer.jpg');
+   background-position: top left;
+   background-repeat: no-repeat;
+   background-size: cover;
+   animation: backgroundAnimation 30s infinite alternate;
  }
 
 @keyframes backgroundAnimation {
@@ -29,6 +40,14 @@ body {
    to {
       background-size: 110% 110%;
    }
+}
+
+div {
+   display: grid;
+   grid-column: auto;
+   place-items: center;
+   align-content: center;
+   min-height: 100vh;
 }
 
 section {
@@ -46,6 +65,7 @@ h1 {
    display: grid;
    place-items: center;
    align-content: center;
+   min-height: 20vh;
 }
 
 h2 {
@@ -59,22 +79,29 @@ h2 {
 
 .fadeIn {
    opacity: 0;
-   filter: blur(10px);
+   filter: blur(5px);
    transition: all 3s;
 }
 
 .hiddenLeft {
    opacity: 0;
-   filter: blur(10px);
+   filter: blur(20px);
+   transform: translateX(-100%);
+   transition: all 1s;
+}
+
+.hiddenLeft2 {
+   opacity: 0;
+   filter: blur(20px);
    transform: translateX(-100%);
    transition: all 1s;
    transition-delay: 2s;
 }
 
-.hiddenRight {
+.hiddenLeft4 {
    opacity: 0;
-   filter: blur(10px);
-   transform: translateX(+100%);
+   filter: blur(20px);
+   transform: translateX(-100%);
    transition: all 1s;
    transition-delay: 4s;
 }
